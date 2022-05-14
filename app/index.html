@@ -1,0 +1,63 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My lonely Island</title>
+  <meta name="description" content="Take a rest and walk around your own peaceful 3D island in HTML5 / WebGL !">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="styles/main.css">
+
+  <link href='//fonts.googleapis.com/css?family=Frijole' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <div id="blocker" class="easeTransition black-overlay" onmousemove="return false;">
+
+    <div id="instructions">
+      <div id="clickToPlay">Click to enter your island</div>
+      <br>
+      <div id="commands">
+        MOUSE = Look around
+        <br>
+        W, A, S, D or Arrow Keys = Move
+        <br>
+        Press shift key to run
+      </div>
+    </div>
+
+    <div id="clickZone"></div>
+
+    <div id="webGLError" class="hide">
+      <p>Your browser does not support WebGL...</p>
+      <p>
+        Try <a href="http://google.com/chrome" target="_blank">Google Chrome</a> or <a href="http://get.webgl.org" target="_blank">follow this link</a> to know more about it.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- build:js vendor.js -->
+  <script src="./libs/three.js"></script>
+  <script src="scripts/plugins/PointerLockControls.js"></script>
+  <!-- endbuild -->
+
+  <!-- build:js main.js -->
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/sound.js"></script>
+  <script src="scripts/skybox.js"></script>
+  <script src="scripts/shaders/Mirror.js"></script>
+  <script src="scripts/shaders/WaterShaders.js"></script>
+  <script src="scripts/shaders/HeightmapShaders.js"></script>
+  <script src="scripts/water.js"></script>
+  <script src="scripts/heightmap.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/overlay.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>
